@@ -14,31 +14,13 @@ input.onButtonPressed(Button.B, function () {
 input.onGesture(Gesture.Shake, function () {
     Hand = randint(1, 3)
     if (Hand == 1) {
-        basic.showLeds(`
-            # # # # #
-            # . . . #
-            # . . . #
-            # . . . #
-            # # # # #
-            `)
+        basic.showIcon(IconNames.Square)
         music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 500, 499, 255, 0, 750, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
     } else if (Hand == 2) {
-        basic.showLeds(`
-            . . . . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . . . .
-            `)
+        basic.showIcon(IconNames.SmallSquare)
         music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 500, 499, 255, 0, 750, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
     } else {
-        basic.showLeds(`
-            # # . . #
-            # # . # .
-            . . # . .
-            # # . # .
-            # # . . #
-            `)
+        basic.showIcon(IconNames.Scissors)
         music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 500, 499, 255, 0, 750, SoundExpressionEffect.None, InterpolationCurve.Linear), SoundExpressionPlayMode.UntilDone)
     }
 })
